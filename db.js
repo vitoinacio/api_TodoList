@@ -1,9 +1,16 @@
-import mysql from 'mysql';
+import mysql from 'mysql2';
+import dotenv from 'dotenv';
 
-// cria a conexão com o banco de dados e exporta essa conexão;
-export const db = mysql.createConnection({
-  host: 'monorail.proxy.rlwy.net',
-  user: 'root',
-  password: 'kBurJkyPjyFfosFvSebSzCLFISeqPqbt',
-  database: 'railway',
+dotenv.config();
+
+const dbUrl = process.env.DATABASE_URL;
+
+export const db = mysql.createConnection(dbUrl);
+
+db.connect((err) => {
+  if (err) {
+    console.error('Erro ao conectar a database:', err);
+    return;
+  }
+  console.log('Conectado a database.');
 });
