@@ -1,3 +1,4 @@
+// importa o express, as rotas, o cors e o dotenv
 import express from 'express';
 import useRoutes from './routes/tasks.js';
 import cors from 'cors';
