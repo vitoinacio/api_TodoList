@@ -2,8 +2,8 @@ import mysql from 'mysql';
 
 // cria a conexão com o banco de dados e exporta essa conexão;
 export const db = mysql.createConnection({
-  host: 'localhost',
+  host: 'monorail.proxy.rlwy.net',
   user: 'root',
-  password: 'root',
-  database: 'todolist',
+  password: 'kBurJkyPjyFfosFvSebSzCLFISeqPqbt',
+  database: 'railway',
 });
