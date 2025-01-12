@@ -9,10 +9,10 @@ app.use(express.json());
 // define o cors para o express
 app.use(cors());
 
-const port = process.env.PORT || 8800;
-
 // define a rota principal
 app.use("/", useRoutes);
 
 // define a porta do servidor
-app.listen(8800);
+app.listen(8800, () => {
+  console.log('Server running on port 8800');
+});
