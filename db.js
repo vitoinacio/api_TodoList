@@ -6,4 +6,6 @@ export const db = mysql.createConnection({
   user: 'root',
   password: 'root',
   database: 'todolist',
+  port: 3306,
+  connectTimeout: 10000,
 });
