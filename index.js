@@ -3,6 +3,7 @@ import useRoutes from './routes/tasks.js';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
+// configura o dotenv para utilizar as variáveis de ambiente
 dotenv.config();
 
 const app = express();
@@ -16,6 +17,7 @@ app.use(cors());
 app.use("/", useRoutes);
 
 // define a porta do servidor
-app.listen(8800, () => {
-  console.log('Server running on port 8800');
+const port = process.env.PORT || 8800;
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
