@@ -71,3 +71,5 @@ Contribuições são bem-vindas! Siga estas diretrizes para contribuir:
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 ---
+
+para ver a API em execução [API Todo List](https://api-todo-list-amber.vercel.app/tasks)
